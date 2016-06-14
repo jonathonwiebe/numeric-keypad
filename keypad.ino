@@ -1,6 +1,6 @@
 // #include <Keyboard.h> // uncomment if needed - not present in 1.6.5
 
-const int COLUMNS = 4;
+const int COLUMNS = 5;
 const int ROWS = 5;
 const int HB_LED = 17;
 
