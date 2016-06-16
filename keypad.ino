@@ -9,7 +9,7 @@ const int HB_LED = 17;
 // These are the column pins. They're configured for input with
 // internal pullup
 
-int input_pins[COLUMNS] = { 20, 19, 18, 15 } ;
+int input_pins[COLUMNS] = { 20, 19, 18, 15, 14 } ;
 
 // These are the row strobes. They're configured for output
 // and initially all set to high. Individual pins are set to
@@ -26,11 +26,11 @@ unsigned long key_state[ROWS][COLUMNS];
 //  1   2   3   x
 //  0   x  . ENTER
 
-int keycode[ROWS][COLUMNS] = { { 0xDB, 0xDC, 0xDD, 0xDE },
-                               { 0xE7, 0xE8, 0xE9, 0xDF },
-                               { 0xE4, 0xE5, 0xE6, 0    },
-                               { 0xE1, 0xE2, 0xE3, 0 },
-                               { 0xEA, 0,    0xEB, 0XE0 } };
+int keycode[ROWS][COLUMNS] = { { 0, 0xDB, 0xDC, 0xDD, 0xDE },
+                               { 0, 0xE7, 0xE8, 0xE9, 0xDF },
+                               { 0, 0xE4, 0xE5, 0xE6, 0    },
+                               { 0, 0xE1, 0xE2, 0xE3, 0XE0 },
+                               { 0, 0xEA, 0,    0xEB, 0 } };
                       
 int strobe_row = 0;
 int q = 0;
